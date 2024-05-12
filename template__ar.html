@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Rental Request</title>
+    <style>
+        * {
+            direction: rtl;
+        }
+        /* Inline CSS styles */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            color: #666666;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        .img {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .img img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img">
+            <h1>طلب حجز</h1>
+            <img src={https://res.cloudinary.com/dzxf1qrqm/image/upload/v1685623264/New_Sky_file_1_wbzkq7.png} alt="">
+        </div>
+
+        <p>مرحبًا،</p>
+        <p>
+            لقد تلقيت طلب حجز من عميل. يرجى العثور على التفاصيل أدناه:
+        </p>
+
+        <p>تفاصيل العميل:</p>
+        <table>
+            <tr>
+                <th>الاسم</th>
+                <td>{{name}}</td>
+            </tr>
+            <tr>
+                <th>البريد الإلكتروني</th>
+                <td>{{email}}</td>
+            </tr>
+            <tr>
+                <th>الهاتف</th>
+                <td>{{phone}}</td>
+            </tr>
+        </table>
+
+        <p>تفاصيل الحجز:</p>
+        <table>
+            <tr>
+                <th>المنتج</th>
+                <td>طلب حجز</td>
+            </tr>
+            <tr>
+                <th>اسم الحجز</th>
+                <td>{{booking}}</td>
+            </tr>
+            <!-- <tr>
+          <th>تاريخ البدء</th>
+          <td>1 يونيو 2023</td>
+        </tr>
+        <tr>
+          <th>تاريخ الانتهاء</th>
+          <td>5 يونيو 2023</td>
+        </tr> -->
+            <tr>
+                <th>ملاحظات إضافية</th>
+                <td>{{message}}</td>
+            </tr>
+        </table>
+
+        <p>
+            يرجى اتخاذ الإجراءات اللازمة لمعالجة طلب نيو سكاي والاتصال بالعميل للحصول على مزيد من التفاصيل.
+        </p>
+
+        <p>شكرًا لك.</p>
+
+        <p>أطيب التحيات،<br />فريق نيو سكاي الخاص بك</p>
+    </div>
+
+</body>
+
+</html>
